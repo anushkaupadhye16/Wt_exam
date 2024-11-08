@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga Training Dashboard</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { display: flex; }
+        .sidebar { width: 200px; background: rgb(84, 75, 81); color: rgb(33, 28, 23); padding: 15px; position: fixed; height: 100vh; left: 0; transition: transform 0.3s; }
+        .sidebar.collapsed { transform: translateX(-100%); }
+        .toggle-btn { position: fixed; top: 15px; left: 210px; cursor: pointer; }
+        .container { margin-left: 220px; padding: 20px; flex-grow: 1; }
+        .card-header { color: white; }
+        
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <h4>Courses</h4>
+        <p><a href="#" class="text-white">Teacher Training</a></p>
+        <p><a href="#" class="text-white">7 Day Free Trial</a></p>
+        <p><a href="#" class="text-white">Yoga Basics</a></p>
+        <p><a href="#" class="text-white">300 Hour Syllabus</a></p>
+    </div>
+
+    <!-- Toggle Button -->
+    <div class="toggle-btn" onclick="toggleSidebar()">&#9776;</div>
+
+    
+
+
+    <!-- Main Content -->
+    <div class="container" style="background-color: antiquewhite;">
+
+        <h1>Welcome to Yoga Training</h1>
+        <!-- image -->
+    <img src="Yoga-Quotes-for-Yoga-Instructors-7-1024x768.jpg" alt="Yoga Pose" width="max" height="500">
+        <br>
+        <br>
+        <p>Login to start your journey.</p>
+        <form id="login-form">
+            <input type="text" placeholder="First Name" required>
+            <input type="email" placeholder="Email" required>
+            <button type="submit">Login</button>
+        </form>
+        
+        <br>
+        <br>
+        <br>
+
+        <div class="card-group">
+            <div class="card">
+              <img class="card-img-top" src="yogaTeacherTraining.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Teacher Training</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="7dayFreeTrial.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">7 Day Free Trial</h5>
+                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="basicYoga.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Yoga Basics</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+              </div>
+            </div>
+          </div>
+        
+
+        <h2 class="mt-4">Statistics</h2>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card border-primary mb-3">
+                    <div class="card-header bg-primary">Total Enrolled</div>
+                    <div class="card-body"><h3 class="text-center">120</h3></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card border-success mb-3">
+                    <div class="card-header bg-success">Positive Feedback</div>
+                    <div class="card-body"><h3 class="text-center">95%</h3></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript to toggle sidebar -->
+    <script>
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("collapsed");
+        }
+    </script>
+</body>
+</html>
